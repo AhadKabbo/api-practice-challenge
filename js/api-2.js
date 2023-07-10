@@ -37,12 +37,13 @@ const displayCar = () => {
 
   data.forEach((CarInfo) => {
     const CarDiv = document.createElement("div");
-    // CarDiv.classList.add("carInfoStyle");
+    CarDiv.classList.add("carInfoStyle");
     CarDiv.innerHTML = `
-          <h2 class="personName">Car Name: ${CarInfo.name}</h2>
-          <h2 class="personName">Car details: ${CarInfo.description}</h2>
+          <img src="${CarInfo.imageURL}" alt="no image found">
+          <h2 class="carName">Car Name: ${CarInfo.name}</h2>
+          <h2 class="carDetail">Car details: ${CarInfo.description}</h2>
 
-          <button class="personAge">Price: ${CarInfo.price}</button>
+          <button class="btn">Price: ${CarInfo.price}</button>
         
         `;
     CarCard.appendChild(CarDiv);
