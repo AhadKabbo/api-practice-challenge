@@ -31,3 +31,22 @@ const data = [
       "Vehicle Type: Crossover, Doors: 5, Seats: 7, Luggage: 5Suitcases / 5Bags, Transmission: Automatic",
   },
 ];
+
+const displayCar = () => {
+  const CarCard = document.getElementById("CarCard");
+
+  data.forEach((CarInfo) => {
+    const CarDiv = document.createElement("div");
+    // CarDiv.classList.add("carInfoStyle");
+    CarDiv.innerHTML = `
+          <h2 class="personName">Car Name: ${CarInfo.name}</h2>
+          <h2 class="personName">Car details: ${CarInfo.description}</h2>
+
+          <button class="personAge">Price: ${CarInfo.price}</button>
+        
+        `;
+    CarCard.appendChild(CarDiv);
+  });
+};
+
+displayCar();
