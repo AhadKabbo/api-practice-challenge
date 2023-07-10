@@ -39,10 +39,11 @@ const displayPerson = () => {
 
   person.result.forEach((personInfo) => {
     const personDiv = document.createElement("div");
+    personDiv.classList.add("personInfoStyle");
     personDiv.innerHTML = `
-        <h2>Person Name: ${personInfo.name.common}</h2>
-        <h2>Age: ${personInfo.age}</h2>
-        <h2>Street: ${personInfo.address.street}</h2>
+        <h2 class="personName">Person Name: ${personInfo.name.common}</h2>
+        <h2 class="personAge">Age: ${personInfo.age}</h2>
+        <h2 class="personStreet">Street: ${personInfo.address.street}</h2>
       `;
     personCard.appendChild(personDiv);
   });
