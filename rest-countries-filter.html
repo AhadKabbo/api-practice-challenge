@@ -4,12 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rest-countries-Filter</title>
+    <style>
+      #all-countries {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+      }
+      .country {
+        border: 2px solid tomato;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
-    <section id="car">
-      <div id="CarCard"></div>
+    <h2>All Countries</h2>
+    <section id="country-detail"></section>
+    <section>
+      <div id="all-countries"></div>
     </section>
-    <!-- JS file -->
+
+    <section>
+      <div class="dropdown">
+        <button class="dropdown-btn">Filter Countries</button>
+        <div class="dropdown-content">
+          <button id="filter-region-btn">By Region</button>
+          <button id="filter-capital-btn">By Capital</button>
+          <button id="filter-language-btn">By Language</button>
+        </div>
+      </div>
+    </section>
     <script src="js/api-3.js"></script>
   </body>
 </html>
