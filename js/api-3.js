@@ -11,6 +11,7 @@ const displayCountries = (countries) => {
   //     console.log(country)
   // }
   countries.forEach((country) => {
+    console.log(country);
     console.log(country.cca2);
     const countryDiv = document.createElement("div");
     countryDiv.classList.add("country");
